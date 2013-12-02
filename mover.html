@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mover</title>
+	<script src="jquery-1.10.2.min.js"></script>
+  <script src="logic.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row"> 
+      <div class="col-md-5">
+        <div>$<span class="money">0</span></div>
+        <div class="buttons">
+          <a href="#"><div class="button" id="rate">Increase rate $<span class="rateCost">5</span><br /><span class="flavor-text">Increases your money tick rate.</span></div></a>
+          <a href="#"><div class="button" id="multiplier">Multiplier $<span class="multiplierCost">10</span><br /><span class="flavor-text">Increases money gained per tick.</span></div></a>
+          <a href="#"><div class="button" id="moneyMastery">Purcahse Mastery $<span class="masteryCost">1000000</span><br /><span class="flavor-text">You're quite the shrewd businessman.</span></div></a>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div><span class="oil">0</span> gal</div>
+        <div class="buttons">
+          <a href="#"><div class="button" id="mine">Mine Oil<br /><span class="flavor-text">Converts oil to money.</span></div></a>
+          <a href="#"><div class="button" id="oilMultiplier">Invest in Oil $<span class="oilMultiplierCost">15000</span><br /><span class="flavor-text">Increases oil yield per tick.</span></div></a>
+          <a href="#"><div class="button" id="oilValue">Oil gal. price+ $<span class="oilValueCost">5000</span><br /><span class="flavor-text">Get more money per gallon of oil.</span></div></a>
+          <a href="#"><div class="button" id="oilMastery">Purchase Mastery $<span class="oilMasteryCost">5000000</span><br /><span class="flavor-text">You're a master of your domain: oil harvesting</span></div></a>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div>Exchange Rate: <br /><span class="exchangeRate">0</span> to the dollar (per gal.)</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="system-message"></div>
+    </div>
+
+  <hr />
+  <div id="debt-owed-container"><h2>Debt Owed: <span class="debtOwed">10000000</span> gallons of oil</h2></div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#"><div class="button pay-button" id="pay">Pay debt</div></a>
+    </div>
+  </div>
+
+
+  <div id="explanation">
+    <p>You are an oil man who has just paid a hefty price for a deed to an oil field. You better start workin', because that deed wasn't cheap!</p>
+    <p><b>To make matters worse</b>, the benefactor for your land wants to be paid back in gallons of oil; no U.S. dollars here!</p>
+    <p>Begin by building up your oil infrastructure so you can start making moolah, then start shipping out the fruits of your labor to your benefactor.
+    <br />
+    <b>Be Warned!</b> Sometimes disaster can strike, impacting your finances or your oil production!
+    </p>
+    <h2><a href="#" class="deed-toggle">Click here to read "The Deed"</a></h2>
+    <div class="deed">
+      To my good sir,
+      <br />
+      I am glad we were able to strike this deal for our mutual benefit. To you, I gave my acres of oil fields, ripe for the pickin' in exchange for quite a large, but fair, sum of money. 
+      Now, as a gentleman of leisure, I don't expect that large sum of money to be paid back at all, but I do expect you to reciprocate the fine generosity I have shown you. All I ask for in return is a fair share of your oil field yield, once you get your operation up and running. 
+      I really hope that this deal will be mutually beneficial to both of us. I sure do hate being on the wrong end of a raw deal. 
+      <br />
+      <br />
+      Well partner, I guess this is goodbye until I see the return on my investment. 
+      <br />
+      <br />
+      Best,
+      <br />
+      Chester
+
+    </div>
+
+    
+
+  </div>
+    <div class="Achievements">
+      <h1>Achievements</h1>
+      <div class="trophyCase"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>

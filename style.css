@@ -1,0 +1,45 @@
+a {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+.buttons {
+    width: 25%;
+}
+
+
+.button {
+  padding:5px;
+  border: 1px solid #000;
+  margin: 5px 0 5px 0;
+}
+
+.button:hover {
+  background-color: #F2F2F2;
+}
+
+#explanation {
+  background-color: #EBCEAC;
+}
+
+.pay-button {
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flavor-text {
+  color: #989898;
+  font-size: 0.8em;
+}
+
+
+.deed {
+  padding: 0 15px 0 15px;
+  display: none;
+  font-family:'Monotype Corsiva', 'Apple Chancery', 'ITC Zapf Chancery', 'URW Chancery L', cursive;
+  font-size: 18px;
+}
