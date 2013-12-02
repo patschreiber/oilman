@@ -67,9 +67,9 @@ $(document).ready(function() {
   $('#moneyMastery').click(function() {
     if(money >= moneyMasteryCost) {
       money = money - moneyMasteryCost;
+      $('.trophyCase').append('<p class="label label-success">Master of Money</p>');
+      $('#moneyMastery').hide();
     }
-    $('.trophyCase').append('<p class="label label-success">Master of Money</p>');
-    $('#moneyMastery').hide();
   });
 
 
@@ -114,10 +114,9 @@ $(document).ready(function() {
   $('#oilMastery').click(function() {
     if(money >= oilMasteryCost) {
       money = money - oilMasteryCost;
+      $('.trophyCase').append('<p class="label label-success">Oil Man</p>');
+      $('#oilMastery').hide();
     }
-
-    $('.trophyCase').append('<p class="label label-success">Oil Man</p>');
-    $('#oilMastery').hide();
   });
 
 
@@ -185,10 +184,21 @@ $(document).ready(function() {
       });
     }
     else if ( randomInt < 100 && randomInt >= 75 ) {
-      //Fairly unlucky roll. Lose % of oil and money
+     moneyLost = Math.ceil(money * 0.05);
+     oilLost = Math.ceil(oil * 0.1);
+     money = money - moneyLost;
+     oil = oil - oilLost;
+     $('.oil').text(oil);
+     $('.money').text(money);
+     $('.system-message').append('<p class="unlucky">There was a mechanical breakdown. You\'re production has been slowed briefly.</p>').fadeOut(3000, function() {
+       $('.system-message').removeAttr("style").children("p").remove();
+     });
+ 
     }
     else if ( randomInt < 75 && randomInt >= 50 ) {
-      //Fairly lucky roll. Money + but oil -
+      $('.system-message').append('<p class="unlucky">Everything operating normally. Carry on, oil baron.</p>').fadeOut(3000, function() {
+        $('.system-message').removeAttr("style").children("p").remove();
+      });
     }
     else if ( randomInt < 50 && randomInt > 1 ) {
       //Normal Roll. No change.
