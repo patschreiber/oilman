@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var money = 100000000;
+  var money = 0;
   var level = 1;
   var exchangeRate = 1;
   var multiplier = 1;
