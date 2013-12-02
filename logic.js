@@ -183,7 +183,7 @@ $(document).ready(function() {
         $('.system-message').removeAttr("style").children("p").remove();
       });
     }
-    else if ( randomInt < 100 && randomInt >= 75 ) {
+    else if ( randomInt < 100 && randomInt >= 90 ) {
      moneyLost = Math.ceil(money * 0.05);
      oilLost = Math.ceil(oil * 0.1);
      money = money - moneyLost;
@@ -195,7 +195,7 @@ $(document).ready(function() {
      });
  
     }
-    else if ( randomInt < 75 && randomInt >= 50 ) {
+    else if ( randomInt < 90 && randomInt >= 75 ) {
       $('.system-message').append('<p class="unlucky">Everything operating normally. Carry on, oil baron.</p>').fadeOut(3000, function() {
         $('.system-message').removeAttr("style").children("p").remove();
       });
