@@ -11,8 +11,9 @@ $(document).ready(function() {
   var oilRate = 5000;
   var oilMultiplier = 1;
   var oilMultiplierCost = 15000;
-  var oilValue = 1
-  var oilValueCost = 5000
+  var oilValue = 1;
+  var oilValueCost = 5000;
+  var currentDebt = 10000000;
 
   var ticker = setInterval(function() {
     money = money + (1 * multiplier);
@@ -112,6 +113,14 @@ $(document).ready(function() {
 
 
   //-------------------------------------------------------
+
+  $('#debt-owed-container').click(function() {
+    currentDebt = currentDebt - oil;
+    oil = 0;
+    $('.oil').text(oil);
+    $('.debtOwed').text( currentDebt );
+  });
+
 
   function update() {
     $('.money').text(money);
