@@ -114,11 +114,21 @@ $(document).ready(function() {
 
   //-------------------------------------------------------
 
-  $('#debt-owed-container').click(function() {
-    currentDebt = currentDebt - oil;
+  $('#pay').click(function() {
+    if(currentDebt >= oil) {
+      currentDebt = currentDebt - oil;
+    }
+    else {
+      currentDebt = 0;
+    }
     oil = 0;
     $('.oil').text(oil);
     $('.debtOwed').text( currentDebt );
+
+    if(currentDebt <= 0) {
+      alert("You Win! The oil fields are legally yours!");
+      $('#pay').hide();
+    }
   });
 
 
