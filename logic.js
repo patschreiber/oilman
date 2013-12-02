@@ -6,6 +6,7 @@ $(document).ready(function() {
   var tickRate = 1000;
   var multiplierCost = 10;
   var rateCost = 5;
+  var moneyMasteryCost = 1000000;
 
   var oil = 0;
   var oilRate = 5000;
@@ -14,6 +15,7 @@ $(document).ready(function() {
   var oilValue = 1;
   var oilValueCost = 5000;
   var currentDebt = 10000000;
+  var oilMasteryCost = 5000000;
 
   var ticker = setInterval(function() {
     money = money + (1 * multiplier);
@@ -63,6 +65,9 @@ $(document).ready(function() {
   });
 
   $('#moneyMastery').click(function() {
+    if(money >= moneyMasteryCost) {
+      money = money - moneyMasteryCost;
+    }
     $('.trophyCase').append('<p class="label label-success">Master of Money</p>');
     $('#moneyMastery').hide();
   });
@@ -107,6 +112,10 @@ $(document).ready(function() {
   });
 
   $('#oilMastery').click(function() {
+    if(money >= oilMasteryCost) {
+      money = money - oilMasteryCost;
+    }
+
     $('.trophyCase').append('<p class="label label-success">Oil Man</p>');
     $('#oilMastery').hide();
   });
