@@ -14,7 +14,7 @@ $(document).ready(function() {
   var oilMultiplierCost = 15000;
   var oilValue = 1;
   var oilValueCost = 5000;
-  var currentDebt = 10000000;
+  var currentDebt = 1000000;
   var oilMasteryCost = 5000000;
 
   var ticker = setInterval(function() {
@@ -179,7 +179,7 @@ $(document).ready(function() {
     if ( randomInt == 100 || randomInt == 1 ) {
       oil = 0
       $('.oil').text(oil);
-      $('.system-message').append('<p class="unlucky">There was a major fire in your oil fields. You\'ve lost it all! Oh no!</p>').fadeOut(3000, function() {
+      $('.system-message').append('<p class="unlucky">There was a major fire in your oil fields. You\'ve lost it all! Oh no!</p>').fadeOut(5000, function() {
         $('.system-message').removeAttr("style").children("p").remove();
       });
     }
@@ -190,17 +190,17 @@ $(document).ready(function() {
      oil = oil - oilLost;
      $('.oil').text(oil);
      $('.money').text(money);
-     $('.system-message').append('<p class="unlucky">There was a mechanical breakdown. You\'re production has been slowed briefly.</p>').fadeOut(3000, function() {
+     $('.system-message').append('<p class="unlucky">There was a mechanical breakdown. You\'re production has been slowed briefly.</p>').fadeOut(5000, function() {
        $('.system-message').removeAttr("style").children("p").remove();
      });
  
     }
     else if ( randomInt < 80 && randomInt >= 65 ) {
-      $('.system-message').append('<p class="unlucky">Everything operating normally. Carry on, oil baron.</p>').fadeOut(3000, function() {
+      $('.system-message').append('<p class="unlucky">Everything operating properly. Carry on, oil baron.</p>').fadeOut(5000, function() {
         $('.system-message').removeAttr("style").children("p").remove();
       });
     }
-    else if ( randomInt < 50 && randomInt > 1 ) {
+    else if ( randomInt < 65 && randomInt > 1 ) {
       //Normal Roll. No change.
     }
     else {
